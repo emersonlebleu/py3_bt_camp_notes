@@ -37,5 +37,7 @@ print(my_information.get("name"))
 
 #dict comp
 #{x:x for x in x}
-
 {print(f"Key: {k}"):print(f"Val: {v}") for k,v in my_information.items()}
+#practice with conditionals within dict comp
+practice = {num: ("even" if num %2 ==0 else "odd") for num in range(1,20)}
+print(practice)
