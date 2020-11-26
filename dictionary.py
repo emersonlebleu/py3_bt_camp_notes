@@ -34,3 +34,8 @@ new_user = {}.fromkeys(["name", "email", "last_name", "age"], None)
 # print(new_user)
 
 print(my_information.get("name"))
+
+#dict comp
+#{x:x for x in x}
+
+{print(f"Key: {k}"):print(f"Val: {v}") for k,v in my_information.items()}
