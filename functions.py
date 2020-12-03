@@ -46,8 +46,11 @@ print(combine_names("First_Name", "Last_Name"))
 
 #perameters having defaults
 def combine_names2(a="First",b="Last"):
+    """just returns a combined first and last name"""
     return a + " " + b
 print(combine_names2())
 
 #an example of using default keword arguments
 print(combine_names2(b="Lebleu", a="Emerson"))
+
+#some_function.__doc__ will give us the documentation of functions
