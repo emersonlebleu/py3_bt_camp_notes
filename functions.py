@@ -48,3 +48,6 @@ print(combine_names("First_Name", "Last_Name"))
 def combine_names2(a="First",b="Last"):
     return a + " " + b
 print(combine_names2())
+
+#an example of using default keword arguments
+print(combine_names2(b="Lebleu", a="Emerson"))
