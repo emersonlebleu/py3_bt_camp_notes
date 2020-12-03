@@ -14,4 +14,16 @@ def return_function():
     return 2*2
 num = return_function()
 print(num)
+#same as two other lines above without variable
 print(return_function())
+
+#creating little flip coin function as an example
+from random import random
+
+def flip_coin():
+    #make a number (note this random() generates num between 0 and 1)
+    if random() > 0.5:
+        return "Heads"
+    else:
+        return "Tails"
+print(flip_coin())
