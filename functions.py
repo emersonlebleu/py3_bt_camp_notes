@@ -27,3 +27,10 @@ def flip_coin():
     else:
         return "Tails"
 print(flip_coin())
+
+#starting to practice with perameters
+def square(num):
+    return num**2
+
+user_num = int(input("What do you want to square? "))
+print(f"Okay the square of {user_num} is {square(user_num)}")
