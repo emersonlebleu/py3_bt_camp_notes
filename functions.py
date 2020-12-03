@@ -32,5 +32,19 @@ print(flip_coin())
 def square(num):
     return num**2
 
+#as a side note this way of writing the input doesnt control for any errors
+#if a user puts something that isnt a number we will get an error
 user_num = int(input("What do you want to square? "))
 print(f"Okay the square of {user_num} is {square(user_num)}")
+
+#multiple perameters
+def combine_names(a,b):
+    return a + " " + b
+print(combine_names("First_Name", "Last_Name"))
+
+#"arguments" are what we pass into a "parameter" of a function
+
+#perameters having defaults
+def combine_names2(a="First",b="Last"):
+    return a + " " + b
+print(combine_names2())
