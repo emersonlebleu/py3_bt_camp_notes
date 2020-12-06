@@ -40,3 +40,10 @@ print(evens)
 #reversed() takes iterable and returns the reverse use reversed when you are iterating over 
 #in reverse
 
+#abs() absolute value
+#in math so you must import math then math.fabs(-4) converts to float then give ab val
+#sum(iterable,start) some iterable, start will tell it where to start what number to add these nums to
+#round() specify the num of didgets
+#zip() you zip together two lists into pairs (can be converted to dictionary or list returns tuple)
+#can use the *argument to use sip to unpair things will create two seperate tuples
+
