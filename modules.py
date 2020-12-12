@@ -19,3 +19,5 @@ init()
 
 print(colored("My Dog is Rad!", "white", "on_blue"))
 
+#__name__ returns the attribute __main__
+#can use "if __name__ == "__main__" if you dont want what is Inside of the file to run on import but want to use the variables 
