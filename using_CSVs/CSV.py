@@ -11,7 +11,7 @@
 # from csv import reader
 # with open("fighters.xls") as file:
 #     csv_reader = reader(file)
-#     (csv_reader) #starts us after the headers so they dont print
+#     next(csv_reader) #starts us after the headers so they dont print
 #     for row in csv_reader:
 #         print(row)
 
@@ -34,8 +34,8 @@
 #--Delimiter is what separates the values and can read files not sep by commas
 ##syntax: csv_reader = DictReader(file, delimiter="|")
 
-from csv import writer, DictReader, reader
-from os import read
+# from csv import writer, DictReader, reader
+# from os import read
 # with open("dog_data.csv", "w") as file:
 #     csv_writer = writer(file)
 #     csv_writer.writerow(["Name", "Breed", "Age"])
@@ -44,12 +44,31 @@ from os import read
 #     csv_writer.writerow(["Odin", "Pug", 0])
 #     csv_writer.writerow(["Annie", "Poodle", 6])
 
-with open("dog_data.csv") as file:
-    csv_reader = reader(file)
-    dogs = [[x.upper() for x in row] for row in csv_reader]
+# with open("dog_data.csv") as file:
+#     csv_reader = reader(file)
+#     dogs = [[x.upper() for x in row] for row in csv_reader]
 
 #since I already have an import statment i'm not having to write it again
-with open("dog_data_caps.csv", "w", newline='') as file:
-    csv_writer = writer(file)
-    for dog in dogs:
-        csv_writer.writerow(dog)  
+#as a note we can nest these with statements within one another
+# with open("dog_data_caps.csv", "w", newline='') as file:
+#     csv_writer = writer(file)
+#     for dog in dogs:
+#         csv_writer.writerow(dog)
+
+#--writing using DictWriter
+##example
+# from csv import DictWriter
+# with open('example.csv', 'w', newline='') as file:
+#     headers = ['Character', 'Move']
+#     csv_writer = DictWriter(file, fieldnames=headers)
+#     csv_writer.writeheader()
+#     csv_writer.writerow({
+#         'Character': 'Ryu', 
+#         'Move': 'Chacha'
+#     })
+
+from csv import reader
+
+with open('dog_data.csv') as file:
+    csv_reader = reader(file)
+    print(list(enumerate(csv_reader)))
