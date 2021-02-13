@@ -20,9 +20,24 @@ def is_valid_phone(entry):
     return False
 
 def parse_date(entry):
-    date_regex = re.compile(r"(\d\d)(/|\.|,)(\d\d)(/|\.|,)(\d\d\d\d)")
+    date_regex = re.compile(r"""
+        (\d\d)
+        (/|\.|,)
+        (\d\d)
+        (/|\.|,)
+        (\d\d\d\d)
+    """, re.x)
     match = date_regex.fullmatch(entry)
     if match:
-        return print({"d":match.group(1), "m":match.group(3), "y":match.group(5)})
+        return {
+            "d":match.group(1), 
+            "m":match.group(3), 
+            "y":match.group(5)
+            }
+    return None
 
-parse_date("12.30.1200")
+#---substitutions---#
+
+def censor(entry):
+    censor_regex = re.compile(r'\b\w*frack\w*\b', re.I)
+    return censor_regex.sub("CENSORED", entry)
